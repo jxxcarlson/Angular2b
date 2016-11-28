@@ -12,7 +12,8 @@ import { HtmlPane } from './shared/htmlpane.component';
 import { TextPane } from './shared/textpane.component';
 
 import { TextPageHeightDirective } from './shared/textpageheight.directive';
-import { DocumentListComponent } from './document-list/document-list.component'
+import { DocumentListComponent } from './document-list/document-list.component';
+import { DocumentListItemComponent } from './document-list-item/document-list-item.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DocumentListComponent } from './document-list/document-list.component'
     NavbarComponent,
     FooterComponent,
     DocumentComponent,
-    HtmlPane, TextPane, TextPageHeightDirective, DocumentListComponent
+    HtmlPane, TextPane, TextPageHeightDirective,
+    DocumentListComponent, DocumentListItemComponent
   ],
   imports: [
     BrowserModule,
