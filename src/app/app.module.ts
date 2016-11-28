@@ -11,7 +11,8 @@ import { DocumentComponent } from './document/document.component';
 import { HtmlPane } from './shared/htmlpane.component';
 import { TextPane } from './shared/textpane.component';
 
-import { DocumentService } from './shared/document.service';
+import { ApiService } from './shared/api.service';
+import { DocumentNotificationService } from './shared/document-notification.service';
 
 import { TextPageHeightDirective } from './shared/textpageheight.directive';
 import { DocumentListComponent } from './document-list/document-list.component';
@@ -31,7 +32,7 @@ import { DocumentListItemComponent } from './document-list-item/document-list-it
     FormsModule,
     HttpModule
   ],
-  providers: [DocumentService],
+  providers: [DocumentNotificationService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,11 +2,12 @@
   <h1> {{documentListTitle}}</h1>
 
   <div *ngIf="documents" [textPageHeight] style="overflow: scroll">
-    <ul class="list-group users-list">
+    <ul class="">
       <document-list-item class="list-group-item"
           *ngFor="let currentDocument of documents"
                           [document]="currentDocument"
                           (click)="selectDocument(currentDocument)"
+                          [class.active]="isActive(currentDocument)"
       >
       </document-list-item>
     </ul>

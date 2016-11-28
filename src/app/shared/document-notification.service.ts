@@ -5,7 +5,7 @@ import { Subject }    from 'rxjs/Subject';
 import { Document }  from './document.model';
 
 @Injectable()
-export class DocumentService {
+export class DocumentNotificationService {
 
 
     activeDocument: Document
@@ -23,5 +23,6 @@ export class DocumentService {
       console.log(`Announced: ${document.title}`)
       this.documentSelectionAnnounced.next(document);
     }
+
 
 }

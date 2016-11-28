@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Document } from '../shared/document.model'
-import { DocumentService } from '../shared/document.service'
+import { DocumentNotificationService } from '../shared/document-notification.service'
 
 @Component({
   selector: 'app-document',
@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum maxim
 
   activeDocument: Document
 
-  constructor(documentService: DocumentService) {
+  constructor(documentService: DocumentNotificationService) {
 
     this.activeDocument = this.exampleDocument
     documentService.announceSelection(this.exampleDocument)

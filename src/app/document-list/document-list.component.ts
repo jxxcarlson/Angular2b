@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Document } from '../shared/document.model'
-import { DocumentService } from '../shared/document.service'
+import { DocumentNotificationService } from '../shared/document-notification.service'
 
 @Component({
   selector: 'document-list',
@@ -15,7 +15,7 @@ export class DocumentListComponent implements OnInit {
 
   documentListTitle:string = 'Documents'
 
-  constructor( private documentService: DocumentService ) { }
+  constructor( private documentService: DocumentNotificationService ) { }
 
   ngOnInit() {
 
@@ -26,6 +26,50 @@ export class DocumentListComponent implements OnInit {
     console.log(`clicked => ${document.title}`)
     this.activeDocument = document
     this.documentService.announceSelection(document)
+  }
+
+  isActive(document: Document): boolean {
+
+    if ( document == undefined) {
+
+      console.log(`false: in isActive, document is undefined`)
+      return false
+
+    }
+
+    if ( document == this.activeDocument) {
+
+      console.log(`true: ${document.id}/${this.activeDocument.id}` )
+      return true
+
+    } else {
+
+      console.log(`false: ${document.id}/${this.activeDocument}` )
+      return false
+    }
+
+  }
+
+  getBGColor(document) {
+
+    //console.log(`docs: ${document.id} ${this.activeDocument.id}`)
+
+
+    // if (this.activeDocument == undefined || document != this.activeDocument) {
+    if ( document == this.activeDocument) {
+
+      console.log(`COLOR: ${document.id}/${this.activeDocument.id}` )
+      return "'darkred'"
+
+    } else {
+
+      console.log(`NEUTRAL: ${document.id}/${this.activeDocument}` )
+      return "'gray'"
+    }
+    /*
+    console.log(`docs: ${document.id}` )
+    return "'blue'"
+    */
   }
 
 }

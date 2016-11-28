@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Document } from '../shared/document.model'
-import { DocumentService } from '../shared/document.service'
+import { DocumentNotificationService } from '../shared/document-notification.service'
 
 @Component({
   selector: 'footer',
@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit {
 
 
 
-  constructor(documentService: DocumentService) {
+  constructor(documentService: DocumentNotificationService) {
 
     documentService.documentAnnounced$.subscribe(
       doc => {
