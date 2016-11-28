@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Document } from '../shared/document.model'
+import { DocumentService } from '../shared/document.service'
 
 @Component({
   selector: 'footer',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+
+  activeDocument: Document
+  id: string
+
+
+
+  constructor(documentService: DocumentService) {
+
+    documentService.documentAnnounced$.subscribe(
+      doc => {
+        this.activeDocument = doc;
+        this.id = doc.id || '0'
+        console.log(`FF: Active document received by footer: ${doc.title}`)
+      });
+
+  }
 
   ngOnInit() {
   }
