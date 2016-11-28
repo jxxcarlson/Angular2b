@@ -7,7 +7,7 @@
           *ngFor="let currentDocument of documents"
                           [document]="currentDocument"
                           (click)="selectDocument(currentDocument)"
-                          [class.active]="isActive(currentDocument)"
+                          [active]="isActive(currentDocument)"
       >
       </document-list-item>
     </ul>
