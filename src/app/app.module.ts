@@ -11,13 +11,15 @@ import { DocumentComponent } from './document/document.component';
 import { HtmlPane } from './shared/htmlpane.component';
 import { TextPane } from './shared/textpane.component';
 
+import { TextPageHeightDirective } from './shared/textpageheight.directive'
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     DocumentComponent,
-    HtmlPane, TextPane
+    HtmlPane, TextPane, TextPageHeightDirective
   ],
   imports: [
     BrowserModule,

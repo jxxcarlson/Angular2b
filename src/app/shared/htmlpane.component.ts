@@ -5,7 +5,7 @@ import { Document } from './document.model';
   selector: 'html-pane',
   template: '<div class="rendered-document" [innerHTML]=document.rendered_text></div>',
   styles: [`.rendered-document {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     height: calc(100% - 0px);
     overflow: scroll;
 }`]

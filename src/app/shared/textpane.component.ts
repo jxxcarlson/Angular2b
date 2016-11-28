@@ -5,9 +5,10 @@ import { Document } from './document.model';
   selector: 'text-pane',
   template: `<div class="rendered-document">{{document.text}}</div>`,
   styles: [`.rendered-document {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     height: calc(100% - 0px);
     overflow: scroll;
+    white-space: pre-line;
 }`]
 })
 export class TextPane {
