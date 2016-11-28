@@ -10,11 +10,20 @@ export class DocumentListComponent implements OnInit {
 
   @Input() documents: Document[]
 
-  documentListTitle = 'Documents'
+  activeDocument: Document
+
+  documentListTitle:string = 'Documents'
 
   constructor() { }
 
   ngOnInit() {
+
+
+  }
+
+  selectDocument(document) {
+    console.log(`clicked => ${document.title}`)
+    this.activeDocument = document
   }
 
 }

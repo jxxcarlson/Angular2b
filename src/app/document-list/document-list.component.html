@@ -4,7 +4,10 @@
   <div *ngIf="documents" [textPageHeight] style="overflow: scroll">
     <ul class="list-group users-list">
       <document-list-item class="list-group-item"
-          *ngFor="let currentDocument of documents" [document]="currentDocument">
+          *ngFor="let currentDocument of documents"
+                          [document]="currentDocument"
+                          (click)="selectDocument(currentDocument)"
+      >
       </document-list-item>
     </ul>
   </div>
