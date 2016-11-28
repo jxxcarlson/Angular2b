@@ -9,12 +9,14 @@ import { FooterComponent } from './footer/footer.component';
 import { DocumentComponent } from './document/document.component';
 
 import { HtmlPane } from './shared/htmlpane.component';
+import { MathJaxPane } from './shared/mathjaxpane.component';
 import { TextPane } from './shared/textpane.component';
 
 import { ApiService } from './shared/api.service';
 import { DocumentNotificationService } from './shared/document-notification.service';
 import { DocumentService } from './shared/document.service';
 import { QueryParser } from './shared/queryparser.service';
+import { MathJaxDirective } from './shared/mathjax.directive';
 
 import { TextPageHeightDirective } from './shared/textpageheight.directive';
 import { DocumentListComponent } from './document-list/document-list.component';
@@ -26,8 +28,9 @@ import { DocumentListItemComponent } from './document-list-item/document-list-it
     NavbarComponent,
     FooterComponent,
     DocumentComponent,
-    HtmlPane, TextPane, TextPageHeightDirective,
-    DocumentListComponent, DocumentListItemComponent
+    HtmlPane, TextPane, MathJaxDirective, TextPageHeightDirective,
+    DocumentListComponent, DocumentListItemComponent,
+    MathJaxDirective
   ],
   imports: [
     BrowserModule,
