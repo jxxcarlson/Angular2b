@@ -1,5 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Document } from '../shared/document.model'
+import { DocumentService } from '../shared/document.service'
 
 @Component({
   selector: 'document-list',
@@ -14,7 +15,7 @@ export class DocumentListComponent implements OnInit {
 
   documentListTitle:string = 'Documents'
 
-  constructor() { }
+  constructor( private documentService: DocumentService ) { }
 
   ngOnInit() {
 
@@ -24,6 +25,7 @@ export class DocumentListComponent implements OnInit {
   selectDocument(document) {
     console.log(`clicked => ${document.title}`)
     this.activeDocument = document
+    this.documentService.announceSelection(document)
   }
 
 }

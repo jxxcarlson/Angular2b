@@ -11,13 +11,17 @@ export class AppComponent {
   d1: Document = new Document( {
 
     id: 1,
-    title: 'Introductory Magick'
+    title: 'Introductory Magick',
+    text: 'It _is_ magical!',
+    rendered_text: '<p>It <i>is</i> magical!</p>'
   })
 
   d2: Document = new Document( {
 
     id: 2,
-    title: 'Chemical Stories'
+    title: 'Chemical Stories',
+    text: 'It all began with *Democritus*',
+    rendered_text: '<p>It all began with <b>Democritus</b></p>  '
   })
 
 

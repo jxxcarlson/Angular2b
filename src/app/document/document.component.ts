@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Document } from '../shared/document.model'
+import { DocumentService } from '../shared/document.service'
 
 @Component({
   selector: 'app-document',
@@ -48,9 +48,19 @@ Vivamus dignissim risus tempus lectus dignissim dapibus. Etiam commodo massa vit
 
   activeDocument: Document = this.exampleDocument
 
-  constructor() { }
+  constructor(documentService: DocumentService) {
+
+    this.subscription = documentService.documentAnnounced$.subscribe(
+      doc => {
+        this.activeDocument = doc;
+        console.log(`Active document udpated: ${doc.title}`)
+      });
+  }
 
   ngOnInit() {
+
   }
+
+
 
 }
