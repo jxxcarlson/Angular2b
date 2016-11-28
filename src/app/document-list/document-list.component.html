@@ -1,0 +1,10 @@
+<div *ngIf="documents" [textPageHeight] style="overflow: scroll">
+  <ul class="list-group users-list">
+    <li class="list-group-item"
+        *ngFor="let document of documents"
+        (click)="selectDocument(document)"
+        [class.active]="document === activeDocument">
+      {{ document.title }}
+    </li>
+  </ul>
+</div>

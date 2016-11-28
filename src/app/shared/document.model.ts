@@ -7,7 +7,7 @@ export class Document {
   public rendered_text: string;
   public has_subdocuments: boolean;
   public links: {
-    documents: DocumentHash []
+    documents: Document []
     parent: {id: string, title: string}
   };
 
@@ -28,3 +28,16 @@ export class DocumentHash {
     Object.assign(this, data);
   }
 }
+
+export class DocumentList {
+
+  public status: string;
+  public documentCount: number;
+  public documents: Document[];
+
+  constructor(data = {}) {
+    Object.assign(this, data);
+  }
+
+}
+

@@ -11,7 +11,8 @@ import { DocumentComponent } from './document/document.component';
 import { HtmlPane } from './shared/htmlpane.component';
 import { TextPane } from './shared/textpane.component';
 
-import { TextPageHeightDirective } from './shared/textpageheight.directive'
+import { TextPageHeightDirective } from './shared/textpageheight.directive';
+import { DocumentListComponent } from './document-list/document-list.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { TextPageHeightDirective } from './shared/textpageheight.directive'
     NavbarComponent,
     FooterComponent,
     DocumentComponent,
-    HtmlPane, TextPane, TextPageHeightDirective
+    HtmlPane, TextPane, TextPageHeightDirective, DocumentListComponent
   ],
   imports: [
     BrowserModule,

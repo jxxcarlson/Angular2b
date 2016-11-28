@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Document } from './shared/document.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  d1: Document = new Document( {
+
+    id: 1,
+    title: 'Introductory Magick'
+  })
+
+  d2: Document = new Document( {
+
+    id: 2,
+    title: 'Chemical Stories'
+  })
+
+
+  testDocuments: Document[] = [ this.d1, this.d2 ]
+
 }
