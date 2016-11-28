@@ -15,7 +15,16 @@ export class Document {
     Object.assign(this, data);
   }
 
+}
 
 
+export class DocumentHash {
 
+  public id: string;
+  public identifier; string;
+  public title: string;
+
+  constructor(data = {}) {
+    Object.assign(this, data);
+  }
 }
