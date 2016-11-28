@@ -50,7 +50,7 @@ Vivamus dignissim risus tempus lectus dignissim dapibus. Etiam commodo massa vit
 
   constructor(documentService: DocumentService) {
 
-    this.subscription = documentService.documentAnnounced$.subscribe(
+    documentService.documentAnnounced$.subscribe(
       doc => {
         this.activeDocument = doc;
         console.log(`Active document udpated: ${doc.title}`)
