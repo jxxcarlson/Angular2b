@@ -10,6 +10,8 @@ export class DocumentListComponent implements OnInit {
 
   @Input() documents: Document[]
 
+  documentListTitle = 'Documents'
+
   constructor() { }
 
   ngOnInit() {
