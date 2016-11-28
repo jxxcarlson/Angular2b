@@ -32,44 +32,20 @@ export class DocumentListComponent implements OnInit {
 
     if ( document == undefined) {
 
-      console.log(`false: in isActive, document is undefined`)
       return false
 
     }
 
     if ( document == this.activeDocument) {
 
-      console.log(`true: ${document.id}/${this.activeDocument.id}` )
       return true
 
     } else {
 
-      console.log(`false: ${document.id}/${this.activeDocument}` )
       return false
     }
 
   }
 
-  getBGColor(document) {
-
-    //console.log(`docs: ${document.id} ${this.activeDocument.id}`)
-
-
-    // if (this.activeDocument == undefined || document != this.activeDocument) {
-    if ( document == this.activeDocument) {
-
-      console.log(`COLOR: ${document.id}/${this.activeDocument.id}` )
-      return "'darkred'"
-
-    } else {
-
-      console.log(`NEUTRAL: ${document.id}/${this.activeDocument}` )
-      return "'gray'"
-    }
-    /*
-    console.log(`docs: ${document.id}` )
-    return "'blue'"
-    */
-  }
 
 }

@@ -40,5 +40,23 @@ export class ApiService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
 
   }
+
+  loadDocument(id: string, documentArray: Array<Document>): void {
+
+    console.log(`loadDocument: ${id}`)
+
+    this.getDocument(id)
+      .subscribe(
+
+        doc => documentArray.push(doc)
+
+      )
+  }
+
+  loadDocuments(idList: string[] , documentArray: Array<Document>) {
+
+    idList.forEach( (id) => this.loadDocument(id, documentArray) )
+  }
+
 }
 

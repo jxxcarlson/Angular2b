@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Document } from './shared/document.model';
+import { ApiService } from './shared/api.service'
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,21 @@ export class AppComponent {
     rendered_text: '<p>It all began with <b>Democritus</b></p>  '
   })
 
-
   testDocuments: Document[] = [ this.d1, this.d2 ]
+
+  constructor(private apiService: ApiService) {
+
+    this.apiService = apiService
+
+    this.apiService.loadDocument('177', this.testDocuments)
+
+    this.apiService.loadDocuments(['76', '60', '78', '59', '226'], this.testDocuments)
+
+  }
+
+
+
+
+
 
 }

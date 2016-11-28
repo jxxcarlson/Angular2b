@@ -13,6 +13,8 @@ import { TextPane } from './shared/textpane.component';
 
 import { ApiService } from './shared/api.service';
 import { DocumentNotificationService } from './shared/document-notification.service';
+import { DocumentService } from './shared/document.service';
+import { QueryParser } from './shared/queryparser.service';
 
 import { TextPageHeightDirective } from './shared/textpageheight.directive';
 import { DocumentListComponent } from './document-list/document-list.component';
@@ -32,7 +34,8 @@ import { DocumentListItemComponent } from './document-list-item/document-list-it
     FormsModule,
     HttpModule
   ],
-  providers: [DocumentNotificationService, ApiService],
+  providers: [DocumentNotificationService, DocumentService,
+    QueryParser, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

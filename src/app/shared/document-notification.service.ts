@@ -2,13 +2,15 @@
 
 import { Injectable } from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
-import { Document }  from './document.model';
+import { Document, DocumentList }  from './document.model';
 
 @Injectable()
 export class DocumentNotificationService {
 
 
     activeDocument: Document
+    documents: DocumentList
+
 
     // Observable document sources
     private documentSelectionAnnounced = new Subject<Document>();
