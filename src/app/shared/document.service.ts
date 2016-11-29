@@ -96,7 +96,7 @@ export class DocumentService {
       )
   }
 
-  loadDocumentsFromDocumentList(docs: DocumentHash[]): void {
+  loadDocumentsFromDocumentList(docs: Document[]): void {
 
     this.documentContents = this.documents
     this.documents = []

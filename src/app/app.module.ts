@@ -30,14 +30,15 @@ import { DocumentListItemComponent } from './document-list-item/document-list-it
     DocumentComponent,
     HtmlPane, TextPane, MathJaxDirective, TextPageHeightDirective,
     DocumentListComponent, DocumentListItemComponent,
-    MathJaxDirective
+    MathJaxPane
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [DocumentNotificationService, DocumentService,
+  providers: [DocumentNotificationService,
+    DocumentService,
     QueryParser, ApiService],
   bootstrap: [AppComponent]
 })
